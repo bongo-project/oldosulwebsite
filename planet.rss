@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+	<title>Planet Bongo</title>
+	<link>http://planet.bongo-project.org/</link>
+	<language>en</language>
+	<description>Planet Bongo - http://planet.bongo-project.org/</description>
+
+<item>
+	<title>Lance Haig: Bongo Admin UI Images</title>
+	<guid>http://www.haigmail.com/?p=691</guid>
+	<link>http://www.haigmail.com/2012/01/09/bongo-admin-ui-images/</link>
+	<description>I have uploaded some images of the new UI so you can see what it looks like without installing it. Please let me know what you think. &amp;#160; &amp;#160; &amp;#160;</description>
+	<pubDate>Mon, 09 Jan 2012 17:51:21 +0000</pubDate>
+</item>
+<item>
+	<title>Lance Haig: Building the new Bongo Admin UI</title>
+	<guid>http://www.haigmail.com/?p=688</guid>
+	<link>http://www.haigmail.com/2012/01/09/building-the-new-bongo-admin-ui/</link>
+	<description>A while ago Alex (so_solid_moo to the IRC channel) created a php binding for the Bongo API. He also created the start of the new UI that we are working towards. We started with the admin ui for now as we have created a user interface with the roundcube project that Alex also integrated with. [...]</description>
+	<pubDate>Mon, 09 Jan 2012 17:50:06 +0000</pubDate>
+</item>
+
+</channel>
+</rss>

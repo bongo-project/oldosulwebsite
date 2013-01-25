@@ -1,0 +1,424 @@
+@charset 'utf-8';
+
+/* Standard Stylesheet
+www.bongo-project.org
+Revision: 0.0.1
+Last Changes: 23.01.2007
+*/
+
+/* Jonny's additions */
+pre {
+	padding: 0.7em;
+	border: 1px dashed #2f6fab;
+	color: black;
+	background-color: #f9f9f9;
+	line-height: 1.1em;
+	margin: 10px 0 10px 0;
+}
+
+code {
+	padding: 1em;
+	background-color: #f9f9f9;
+}
+
+
+h4 .editsection,
+h3 .editsection,
+h2 .editsection {
+	font-size: 53%;
+	float: right;
+}
+
+ul .userlinks {
+	display: inline;
+	float: right;
+	padding: 0 0 0 7px;
+	font-size: 70%;
+}
+li .userlinks {
+}
+
+input {
+	border: 1px;
+}
+
+.printfooter {
+	display: none;
+}
+
+/* ----- Core ----- */
+
+/* Reset all */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+
+/* Basic Styles */
+body {
+	background: #fff;
+	color: #333;
+	font-size: 0.8em;
+	font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida", Verdana, "Bitstream Vera Sans", sans-serif;
+	line-height: 1.6em;
+}
+
+/* Clear Class */
+.clear {
+	clear: both;
+}
+
+img, a img {
+	border: 0;
+}
+
+.hide {
+	display: none;
+}
+
+/* Basic Layout */
+.wrap {
+	width: 995px;
+	margin: 0 auto;
+	padding: 0px;
+	clear: both;
+}
+
+/* Floating of elements */
+.left {
+	float: left;
+	margin: 0 0.5em 0 0;
+}
+
+.right {
+	float: right;
+	margin: 0 0 0 0.5em;
+}
+
+/* ----- Header ----- */
+
+#header {
+	margin-top: 5px;
+}
+
+#logo {
+	background: #fff url(img/logo_bg.png) repeat-x top;
+	border-bottom: 1px solid #ccc;
+	height: 100px;
+	clear: both;
+}
+
+#categories {
+	border-top: 1px solid #fff;
+	height: 60px;
+	background: #fff url(img/cat_bg.png) repeat-x;
+	padding: 0 45px;
+}
+
+/* Navigation */
+#navi {
+	background: #000 url(img/navi_bg.png) repeat-x;
+	line-height: 2.4em;
+	height: 32px;
+	padding: 0 42px;
+}
+
+#navi ul {
+	background: url(img/navi_styler.png) 17px 0px no-repeat;
+	margin: 0;
+	padding: 0;
+}
+
+#navi li {
+	display: inline;
+	padding: 0;
+	margin: 0 3px 0 3px;
+}
+
+#navi a {
+	background: none;
+	text-decoration: none;
+	color: #fff;
+}
+
+#navi a:hover {
+	text-decoration: underline;
+}
+
+#navi {
+	color: #fff;
+}
+
+/* Search box */
+#header input.search {
+	margin-left: 7px;
+	background: #fefefe 5px;
+}
+
+/* Logo */
+#logo img {
+	margin: 20px 0 0 28px;
+}
+
+/* Categories */
+#categories h1 {
+	color: #333;
+	font-size: 1.3em;
+	font-weight: normal;
+	padding: 12px 0;
+}
+
+/* ----- Sidebar ----- */
+
+.sidebar {
+	float: left;
+	width: 200px;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+/* Subnavigation */
+.subnav {
+	float: left;
+	width: 120px;
+	border-style: solid;
+	padding-right: 20px;
+	margin-bottom: 20px;
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+.subnav ul {
+}
+
+.subnav li {
+	list-style-type: none;
+}
+
+.subnav a {
+	background: none;
+	color: #E8BA00;
+}
+
+.subnav a:hover  {
+	color: #333;	
+}
+
+.subnav a:visited {
+	background: none;
+	color: #E8BA00;
+}
+
+.subnav-indent {
+	padding-left: 15px;
+	padding-bottom: 10px;
+}
+
+.subnav-dot {
+	font-weight:bold;
+	margin-right:5px;
+}
+
+/* ----- Content ----- */
+
+#container {
+	margin: 7px 0;
+	padding: 0 40px 0 45px;
+}
+
+.content {
+	float: left;
+	width: 709px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 20px;
+	border-left: 1px dotted #888;
+}
+
+/* Paragrahps */
+p {
+	font-size: 1em;
+	margin: 0;
+	clear: both;
+	line-height: 1.2em;
+}
+
+/* Lists */
+.bongo-tour ul {
+	display: inline;
+}
+
+.bongo-tour li {
+	list-style-type: none;
+	padding-left: 35px;
+	font-weight: bold;
+	display: inline;
+	font-size: 90%;
+}
+
+/* Links */
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #666;
+}
+
+#content a:hover {
+	background: #f9f9ed;
+}
+
+/* Small text */
+.small {
+	font-size: 0.9em;
+}
+
+/* Box Model */
+.box {
+	width: 200px;
+	margin-bottom: 15px;
+}
+
+.box-top {
+	height: 45px;
+	background: #ccc url(img/box_top_bg.png) no-repeat top;
+	padding: 0 10px;
+}
+
+.box-headline {
+	border-bottom: 1px solid #ccc;
+}
+
+.box-bottom {
+	height: 15px;
+	background: #ccc url(img/box_bottom_bg.png) no-repeat bottom;
+}
+
+.box-content {
+	background: #fff url(img/box_bg.png) repeat-y;
+	padding: 0 10px;
+	font-size: 0.9em;
+	line-height: 1.2em;
+}
+
+.box-news {
+	padding-bottom: 5px;
+}
+
+/* Headlines */
+
+h1, h2, h3, h4 {
+	font-family: "Lucida Sans",geneva,verdana,sans-serif;
+	font-weight: normal;
+	color: #333;
+}
+
+h3, h4, h5 {
+	border-bottom: 1px solid #aaa;
+}
+
+h1 {
+}
+
+h2 {
+	color: #E8BA00;
+	font-size: 1.7em;
+	letter-spacing: 0.05em;
+	padding: 5px 0;
+}
+
+h3 {
+	margin: 10px 0px 10px 0px;
+}
+
+
+h3 {
+}
+
+h4 {
+	font-weight: bold;
+	padding: 5px 0;
+	font-size: 1.0em;
+}
+
+/* Design elements */
+.welcome {
+	padding-bottom: 10px;
+}
+
+.spacer {
+	margin: 17px 0;
+	border-top: 1px solid #ddd;
+}
+
+/* Forms */
+
+.form {
+	
+}
+
+/* ----- Footer -----*/
+
+#footer {
+	background: #eee url(img/footer_bg.png) repeat-x;
+	line-height: 1.7em;
+	height: 20px;
+	padding: 0 42px;
+	margin: 17px 0 7px 0;
+	font-size: 0.8em;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+}
+
+/* Navigation */
+#footer ul {	
+	margin: 0;
+	padding: 0;
+}
+
+#footer li {
+	display: inline;
+	padding: 0;
+	margin: 0 3px 0 3px;
+}
+
+#footer a {
+	text-decoration: none;
+	color: #eee;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+}
+
+/* Copyright & Validation */
+.copyright {
+	clear: both;
+	color: #bbb;
+	font-size: 0.8em;
+	width: 100%;
+	text-align: center;
+}
+
+.copyright a {
+	color: #bbb;
+	text-decoration: none;
+}
+
+.copyright a:hover {
+	text-decoration: underline;
+}
+
+.copyright .valid { 	background: url(img/valid.png) 0 50% no-repeat; 	padding: 0.2em 8px 0.1em 18px;	font-size: 0.92em;}
+
+/* ----- AJAX ----- */
+
+/* Classes for AJAX technologies */

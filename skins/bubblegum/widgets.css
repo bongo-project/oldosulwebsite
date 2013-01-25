@@ -1,0 +1,220 @@
+/*** Forms style ***/
+input {
+  font-family: inherit;
+  font-size: inherit;
+  /* we probably shouldn't inherit the color without inheriting
+     background? */
+  /* color: inherit; */
+}
+
+input,
+textarea {
+  padding: 1px;
+}
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input:not([type]),
+button,
+textarea {
+  border: 1px solid #bbbed0;
+  padding: 2px;
+  background: #fff url(grad-textarea.png) repeat-x top;
+}
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+input:not([type]):focus,
+button:focus,
+textarea:focus {
+    /*
+    border: 2px solid Highlight;
+    padding: 1px;
+    */
+}
+input[type="text"]:hover,
+input[type="search"]:hover,
+input[type="password"]:hover,
+input:not([type]):hover,
+button:hover,
+textarea:hover {
+    background-color: #fffdf9;
+}
+
+input.empty { color: #999; }
+
+.text-entry {
+    border: 1px solid #bbb;
+}
+
+/* Due to IE6's braindeadness, we cannot combine this with CSS that includes [type=""], as below */
+.toggle-button {
+    -moz-border-radius: 2px;
+    background-image: url(bg-button.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    font-weight: normal;
+    padding: 1px 3pt !important;
+    border-width: 0;
+}
+.widgetcolor,
+.toggle-button {
+    background-color: #fbf6e3;
+    color: #3c2b14;
+    -moz-border-top-colors: #ce9d59 #fdf8f2 transparent;
+    -moz-border-right-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-bottom-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-left-colors: #ce9d59 #fdf8f2 transparent;
+    padding: 2pt;
+}
+
+/* The comment above applies here, plus IE6 applies .toggle-button.selected 
+   to all .selected unless it's specifically specified, as below */
+.toggle-button-group .toggle-button.selected {
+    background-image: url(bg-button-selected.png);
+    background-color: #ffd69b;
+}
+
+/* Hacks to make buttons look better in Mozilla-based browsers */
+body input[type="submit"],
+body input[type="reset"],
+body input[type="button"],
+body button {
+    -moz-border-radius: 2px;
+    background-image: url(bg-button.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    font-weight: normal;
+    padding: 1px 3pt !important;
+    border-width: 2px;
+}
+
+body input[type="submit"],
+body input[type="reset"],
+body input[type="button"],
+body button {
+    background-color: #fbf6e3;
+    color: #3c2b14;
+    -moz-border-top-colors: #ce9d59 #fdf8f2 transparent;
+    -moz-border-right-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-bottom-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-left-colors: #ce9d59 #fdf8f2 transparent;
+}
+body input[type="submit"]:hover,
+body input[type="reset"]:hover,
+body input[type="button"]:hover,
+body button:hover {
+    background-color: #fff;
+}
+body input[type="submit"]:focus,
+body input[type="reset"]:focus,
+body input[type="button"]:focus,
+body button:focus {
+    -moz-border-top-colors: Highlight Highlight transparent;
+    -moz-border-right-colors: Highlight Highlight transparent;
+    -moz-border-bottom-colors: Highlight Highlight transparent;
+    -moz-border-left-colors: Highlight Highlight transparent;
+}
+body input[type="submit"]:active,
+body input[type="reset"]:active,
+body input[type="button"]:active,
+body button:active {
+    background-image: url(bg-button-pressed.png);
+    background-position: top;
+    -moz-border-top-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-right-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-bottom-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-left-colors: #ce9d59 #fcf7f0 transparent;
+}
+body input[type="submit"][disabled],
+body input[type="reset"][disabled],
+body input[type="button"][disabled],
+body button[disabled] {
+    -moz-border-top-colors: #ce9d59 #fdf8f2 transparent;
+    -moz-border-right-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-bottom-colors: #ce9d59 #fcf7f0 transparent;
+    -moz-border-left-colors: #ce9d59 #fdf8f2 transparent;
+}
+
+body input[disabled],
+body input[disabled]:hover,
+body input[disabled]:active,
+body select[disabled],
+body select[disabled]:hover,
+body select[disabled]:active,
+body textarea[disabled],
+body textarea[disabled]:hover,
+body textarea[disabled]:active {
+    background-image: none;
+    background-color: #f4f4f4;
+    border-color: #bbb;
+    color: #999;
+    opacity: 0.75;
+}
+body input[type="button"][disabled],
+body input[type="button"][disabled]:hover,
+body input[type="button"][disabled]:active,
+body input[type="reset"][disabled],
+body input[type="reset"][disabled]:hover,
+body input[type="reset"][disabled]:active,
+body input[type="submit"][disabled],
+body input[type="submit"][disabled]:hover,
+body input[type="submit"][disabled]:active,
+body button[disabled],
+body button[disabled]:hover,
+body button[disabled]:active {
+    background-image: none;
+    background-color: #fbf3e2;
+    color: #bbb;
+    opacity: 0.75;
+}
+
+body.eng-msie input, 
+body.eng-msie button, 
+body.eng-msie select { 
+    font-family: tahoma, arial, helvetica, sans-serif;
+    font-size: 9pt;
+}
+
+body.os-mac input, 
+body.os-mac button, 
+body.os-mac select { 
+    font-family: lucida grande, helvetica, sans-serif;
+    font-size: 0.95em;
+}
+body.os-mac.eng-webkit input,
+body.os-mac.eng-webkit button,
+body.os-mac.eng-webkit select {
+    font-size: 1em;
+}
+
+input, button, select, textarea { }
+
+body input[type="checkbox"],
+body select {
+    -moz-border-top-colors: Transparent #c9bdab;
+    -moz-border-right-colors: White #c9bdab;
+    -moz-border-bottom-colors: White #c9bdab;
+    -moz-border-left-colors: Transparent #c9bdab;
+}
+    body input[type="checkbox"]:focus/*,
+    body select:focus*/ {
+        -moz-border-top-colors: Highlight Highlight transparent;
+        -moz-border-right-colors: Highlight Highlight transparent;
+        -moz-border-bottom-colors: Highlight Highlight transparent;
+        -moz-border-left-colors: Highlight Highlight transparent;
+    }
+    /* Okay, this :hover is a Moz/FF work-around to make single-clicking selects work. */
+    /*select:hover {
+        -moz-border-top-colors: Transparent #c9bdab;
+        -moz-border-right-colors: White #c9bdab;
+        -moz-border-bottom-colors: White #c9bdab;
+        -moz-border-left-colors: Transparent #c9bdab;
+    }*/
+
+    body input[type="checkbox"] {
+        background-image: url(grad-textarea.png);
+        background-position: top;
+        background-repeat: repeat-x;
+        background: #fff url(grad-textarea.png) repeat-x top;
+    }

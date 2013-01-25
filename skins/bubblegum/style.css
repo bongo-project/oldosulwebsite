@@ -1,0 +1,478 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    
+    font-family: Verdana,"DejaVu Sans",Arial,Helvetica,sans-serif;
+    font-size: 0.75em;
+    /*background-image: url('petals.png');
+    background-position: 98% 98%;
+    background-repeat: no-repeat;*/
+    background-color: #eeeeec;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -1px;
+    font-family: "Trebuchet MS",georgia,Verdana,Sans-serif;
+}
+
+h1 {
+    font-size: 300%;	
+}
+
+.jumbo {
+    font-size: 400%;
+}
+
+h2 {
+    font-size: 175%;
+    border-bottom: 1px dotted #2e3436;
+}
+
+h3 {
+    font-size: 125%;
+}
+
+#cnt h1 {
+    font-size: 200%;
+}
+
+/*#cnt h2 {
+    font-size: 150%;
+}*/
+
+
+#header, #content {
+    margin: 0 150px 0 150px;
+    /*width: 760px;*/
+    background-color: #fff;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border: 1px solid #babdb6;
+
+    /*background-image: url('http://assets.mediati.org/mtop.png');
+    background-position: 98% 98%;
+    background-repeat: no-repeat;*/
+}
+
+#header {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.status {
+    text-align: center;
+    letter-spacing: -4px;
+}
+
+.printfooter {
+/*    color: #dabdb6;
+    font-size: 80%;
+    
+    padding: 1.5em;
+*/
+display: none;
+}
+
+.textblur {
+color: #babdb6;
+}
+
+.noblur {
+color: #2e3436;
+}
+
+.nodisplay {
+display: none;
+}
+
+.printlogo, .logo {
+	margin-left: 75px;
+ margin-bottom: 2em;
+}
+
+#navlinky {
+padding-right: 12px;
+padding-left: 12px;
+padding-top: 6px;
+padding-bottom: 6px;
+
+border-bottom: 1px solid #babdb6;
+background-color: #d3d7cf;
+}
+
+.navitem {
+border: 1px solid #d1e8ff;
+padding: 4px;
+padding-left: 1.5em;
+padding-right: 1.5em;
+margin: 0px;
+}
+
+.navitem td:hover, td:hover.navitem {
+background-color: #eeeeec;
+border: 1px solid #729fcf;
+}
+
+.navitem td:active, td:active .navitem,
+.navitem td:focus, td:focus .navitem {
+background-color: #729fcf;
+}
+
+#header a {
+width: 100%;
+height: 100%;
+}
+
+.printlogo {
+display: none;
+}
+
+#footer {
+    text-align: center;
+    color: #2e3436;
+    font-size: 0.75em;
+    
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+pre, codeblock {
+    /*border: 1px solid #555753;*/
+    background-color: #babdb6;
+    border: 1px solid #888a85;
+    /*color: #fff;*/
+    color: #2e3436;
+    
+    padding: 10px;
+    /*padding-top: 26px;	/* 22px (header image) + 4px padding */
+
+    /*background-image: url('terminal-paste.png');*/
+    /*background-position: 98% 98%;*/
+    background-repeat: no-repeat;
+    /*overflow: auto;*/
+}
+
+#mcontent {
+
+    min-height: 400px;    
+
+}
+
+#padder, #mcontent {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#bg {
+    background-image: url('header.jpg');
+    background-repeat: repeat-x;
+    /*background-attachment: fixed;*/
+    
+    padding-top: 1em;
+}
+
+#userbar, #actions {
+    background-color: #eeeeec;
+    border: 1px solid #d3d7cf;
+    padding: 15px;
+}
+
+#userbar {
+margin-top: 2em;
+}
+
+#actions {
+    float: right;
+}
+
+pre, code, tt, kbd, samp, codeblock {
+    font-size: 1em;
+}
+
+fieldset, textarea {
+    border: 1px solid #babdb6;
+}
+
+a, a:active {
+    color: #4e9a06;
+    text-decoration: none;
+    border-bottom: 1px dotted #babdb6;
+}
+
+a:visited {
+    color: #3465a4;
+    /*border-bottom: none;*/
+}
+
+a:hover {
+    color: #204a87;
+    border-bottom: 1px dotted #2e3436;
+}
+
+a:hover.noborder {
+    border-bottom: 0px none;
+}
+
+a.new {
+    color: #cc0000;
+}
+
+#footer a, #footer a:visited, #footer a:hover {
+    color: #2e3436;
+    /*border-bottom: 1px dotted #eeeeec;*/
+}
+
+.homebtn a, .homebtn a:visited, .homebtn a:hover {
+    border-bottom: 0px none;
+    color: #eeeeec;
+}
+
+#header a, #header a:visited {
+    color: #555753;
+    border-bottom: 0px none;
+}
+
+#header a:hover {
+    color: #f57900;
+    border-bottom: 0px none;
+}
+
+#breadbar {
+    font-size: 80%;
+    color: #888a85;
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted #2e3436;
+}
+
+.right, .floatright, #toc, .tright {
+    float: right;
+    margin: 2em;
+}
+
+#toc {
+width: 350px;
+}
+
+.homebtn {
+padding-bottom: 2px;
+}
+
+
+.left, .floatleft, .tleft {
+    float: left;
+    margin: 2em;
+}
+
+.noborder {
+    border: 0px none;
+}
+img {
+border: 0px none;
+}
+
+.info, .warning, .error, .question, .password, .help, .faq, .notes {
+    display: block;
+    padding: 1em;
+    padding-left: 48px;
+
+    background-repeat: no-repeat;
+    background-position: 8px 1em;
+
+    min-height: 2em;
+
+    background-color: #eeeeec;
+    border: 1px solid #d3d7cf;
+}
+
+.info, .information {
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-information.png');
+}
+
+.warning {
+    /*background-color: #e9b96e;
+    border: 1px solid #c17d11;*/
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-warning.png');
+}
+
+.error {
+    /*background-color: #888a85;
+    border: 1px solid #555753;
+    color: #eeeeec;*/
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-error.png');
+}
+
+.question {
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-question.png');
+}
+
+.password {
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-password.png');
+}
+
+.help {
+    background-image: url('http://wiki.mediati.org/skins/mediati/help-contents.png');
+}
+
+.faq {
+    background-image: url('http://wiki.mediati.org/skins/mediati/help-faq.png');
+}
+
+.notes {
+    background-image: url('http://wiki.mediati.org/skins/mediati/accessories-text-editor.png');
+}
+
+/* Tables */
+#mcontent table {
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+    margin: 1em auto;
+    width: 95%;
+}
+#mcontent    table th {
+        font-size: 0.75em;
+        background-color: #f6f6f6;
+    }
+#mcontent    table th,
+#mcontent    table td {
+        padding: 0.5ex 1ex;
+        border: 1px solid #eee;
+    }
+
+#mcontent    table.faq-table {
+        border: 2px solid #ccc;
+        border-collapse: collapse;
+        margin: 1em auto;
+        width: 95%;
+    }
+
+#mcontent    table.toc {
+width: 250px;
+float: right;
+margin: 2em;
+z-index: 5;
+display: block;
+background-color: #eeeeec;
+}
+
+#mcontent table.toc tbody,
+#mcontent table.toc td,
+#mcontent table.toc tr {
+width: 100%;
+}
+
+table, tr, th, td {
+font-size: 1em;
+}
+
+.toctoggle {
+/*float: right;
+position: relative;
+top: -3em;*/
+display: none;
+}
+
+#mcontent    table.faq-table th,
+#mcontent    table.faq-table td {
+        /*border: 1px dotted #ccc;*/
+        padding: 0.5ex 1ex;
+    }
+#mcontent    table.faq-table th {
+        /*font-size: 0.75em;*/
+        background-color: #f6f6f6;
+    }
+#mcontent    table.faq-table td.yes { background-color: #d6f3d3; }
+#mcontent  table.faq-table td.planned { background-color: #fbfbfb; }
+#mcontent    table.faq-table td.tbd { background-color: #f1e5f2; }
+#mcontent    table.faq-table td.na,
+#mcontent    table.faq-table td.no { background-color: #fae4e1; }
+
+body.Special table,
+#mcontent    table.messagebox { border: none; }
+
+    body.Special table th,
+    body.Special table td,
+    table.messagebox th,
+    table.messagebox td { 
+        border: none; 
+        padding: 0; 
+    }
+
+#userloginForm table {
+border: 0px none;
+margin: 0px;
+}
+
+#userloginForm table th,
+#userloginForm table td {
+border: 0px none;
+padding: 0.25em;
+}
+
+
+/* Content Column Split */
+.splits {
+    margin: 0em -1% 0em;
+    padding-top: 1em;
+    overflow: auto;
+}
+
+.split-third {
+	margin: 0 1% 0em;
+	width: 31.25%;
+	float: left;
+	position: relative;
+}
+
+.split-twothird {
+	margin: 0 1% 0em;
+	width: 63%;
+	float: left;
+	position: relative;
+}
+
+.split-half {
+	margin: 0 2% 0em;
+	width: 46%;
+	float: left;
+	position: relative;
+}
+
+* html .split-half {
+	/* IE6 needs a little help with the front page */
+	/* margin: 0 1.5% 1em; */
+	margin-right: 0;
+}
+    
+* html .split-twothird {
+}
+
+/************* MAIN PAGE STUFF ****************/
+
+#taketour, #installit, #getinvolved {
+text-align: center;
+margin-left: 0.25em;
+margin-right: 0.25em;
+
+padding: 6px;
+
+}
+
+#taketour {
+border: 4px solid #3465a4;
+background-color: #729fcf;
+color: #fff;
+}
+
+#getinvolved {
+border: 4px solid #ce5c00;
+background-color: #f57900;
+color: #fff;
+}
+
+#installit {
+border: 4px solid #4e9a06;
+background-color: #73d216;
+color: #2e3436;
+}

@@ -1,0 +1,361 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    
+    font-family: Verdana,"DejaVu Sans",Arial,Helvetica,sans-serif;
+    font-size: 0.8em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -1px;
+    font-family: "Trebuchet MS",georgia,Verdana,Sans-serif;
+}
+
+h1 {
+    font-size: 300%;	
+}
+
+.jumbo {
+    font-size: 400%;
+}
+
+h2 {
+    font-size: 175%;
+    border-bottom: 1px dotted #000;
+}
+
+h3 {
+    font-size: 125%;
+}
+
+#cnt h1 {
+    font-size: 200%;
+}
+
+#header { display: none; }
+
+#content {
+    /*margin: 0 12em 0 12em;*/
+}
+
+.status {
+    text-align: center;
+    letter-spacing: -4px;
+}
+
+.printfooter {
+    color: #ddd;
+    font-size: 80%;
+    
+    padding: 1.5em;
+}
+
+#footer {
+    text-align: center;
+    color: #ddd;
+    font-size: 80%;
+    
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+pre, codeblock {
+    /*border: 1px solid #555753;*/
+    background-color: #000;
+    /*border: 1px solid #888a85;*/
+    color: #fff;
+    
+    padding: 10px;
+    /*padding-top: 26px;	/* 22px (header image) + 4px padding */
+
+    /*background-image: url('terminal-paste.png');*/
+    /*background-position: 98% 98%;*/
+    /*overflow: auto;*/
+}
+#padder, #mcontent {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#bg {
+    background-image: url('header.jpg');
+    background-repeat: repeat-x;
+    /*background-attachment: fixed;*/
+    
+    padding-top: 1em;
+}
+
+#userbar, #actions {
+    display: none;
+}
+
+
+pre, code, tt, kbd, samp, codeblock {
+    font-size: 1.2em;
+}
+
+fieldset, textarea {
+    border: 1px solid #000;
+}
+
+a, a:active {
+    /*border-bottom: 1px dotted #000;*/
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover.noborder {
+text-decoration: none;
+	border: 0px none;
+}
+
+a.new {
+	border: 0px none;
+    color: #000;
+}
+
+#footer a, #footer a:visited {
+	border: 0px none;
+    color: #000;
+}
+
+.homebtn a, .homebtn a:visited {
+    /*color: #fff;*/
+border: 0px none;
+}
+
+#header a, #header a:visited {
+    color: #000;
+border: 0px none;
+}
+
+#breadbar {
+    font-size: 80%;
+    color: #888a85;
+}
+
+abbr, acronym {
+    /*border-bottom: 1px dotted #000;*/
+}
+
+.right, .floatright, #toc {
+    float: right;
+    margin: 2em;
+}
+
+#toc {
+    background-color: #fff;
+    border: 1px solid #000;
+    display: block;
+}
+
+.left, .floatleft {
+    float: left;
+    margin: 2em;
+}
+
+.noborder {
+    border: 0px none;
+}
+
+.nodisplay {
+display: block;
+}
+
+.printlogo, .logo {
+padding: 2em;
+margin: 0px;
+float: right;
+}
+
+.logo {
+display: none;
+}
+
+.editsection {
+display: none;
+}
+
+img {
+    border: 0px none;
+}
+
+.info, .warning, .error, .question, .password, .help, .faq, .notes {
+    display: block;
+    padding: 1em;
+    padding-left: 48px;
+
+    background-repeat: no-repeat;
+    background-position: 8px 1em;
+
+    min-height: 2em;
+
+    background-color: #eeeeec;
+    border: 1px solid #d3d7cf;
+}
+
+.info, .information {
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-information.png');
+}
+
+.warning {
+    /*background-color: #e9b96e;
+    border: 1px solid #c17d11;*/
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-warning.png');
+}
+
+.error {
+    /*background-color: #888a85;
+    border: 1px solid #555753;
+    color: #eeeeec;*/
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-error.png');
+}
+
+.question {
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-question.png');
+}
+
+.password {
+    background-image: url('http://wiki.mediati.org/skins/mediati/dialog-password.png');
+}
+
+.help {
+    background-image: url('http://wiki.mediati.org/skins/mediati/help-contents.png');
+}
+
+.faq {
+    background-image: url('http://wiki.mediati.org/skins/mediati/help-faq.png');
+}
+
+.notes {
+    background-image: url('http://wiki.mediati.org/skins/mediati/accessories-text-editor.png');
+}
+
+/* Tables */
+#mcontent table {
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+    margin: 1em auto;
+    width: 95%;
+}
+#mcontent    table th {
+        font-size: 0.8em;
+        background-color: #f6f6f6;
+    }
+#mcontent    table th,
+#mcontent    table td {
+        padding: 0.5ex 1ex;
+        border: 1px solid #eee;
+    }
+
+#mcontent    table.faq-table {
+        border: 2px solid #ccc;
+        border-collapse: collapse;
+        margin: 1em auto;
+        width: 95%;
+    }
+#mcontent    table.faq-table th,
+#mcontent    table.faq-table td {
+        /*border: 1px dotted #ccc;*/
+        padding: 0.5ex 1ex;
+    }
+#mcontent    table.faq-table th {
+        font-size: 0.8em;
+        background-color: #f6f6f6;
+    }
+#mcontent    table.faq-table td.yes { background-color: #d6f3d3; }
+#mcontent  table.faq-table td.planned { background-color: #fbfbfb; }
+#mcontent    table.faq-table td.tbd { background-color: #f1e5f2; }
+#mcontent    table.faq-table td.na,
+#mcontent    table.faq-table td.no { background-color: #fae4e1; }
+
+body.Special table,
+#mcontent    table.messagebox { border: none; }
+
+    body.Special table th,
+    body.Special table td,
+    table.messagebox th,
+    table.messagebox td { 
+        border: none; 
+        padding: 0; 
+    }
+
+#userloginForm table {
+border: 0px none;
+margin: 0px;
+}
+
+#userloginForm table th,
+#userloginForm table td {
+border: 0px none;
+padding: 0.25em;
+}
+
+#mcontent    table.toc {
+display: none;
+}
+
+
+/* Content Column Split */
+.splits {
+    margin: 0em -1% 0em;
+    padding-top: 1em;
+    overflow: auto;
+}
+
+.split-third {
+	margin: 0 1% 0em;
+	width: 31.25%;
+	float: left;
+	position: relative;
+}
+
+.split-twothird {
+	margin: 0 1% 0em;
+	width: 63%;
+	float: left;
+	position: relative;
+}
+
+.split-half {
+	margin: 0 2% 0em;
+	width: 46%;
+	float: left;
+	position: relative;
+}
+
+* html .split-half {
+	/* IE6 needs a little help with the front page */
+	/* margin: 0 1.5% 1em; */
+	margin-right: 0;
+}
+    
+* html .split-twothird {
+}
+
+/************* MAIN PAGE STUFF ****************/
+
+#taketour, #installit, #getinvolved {
+text-align: center;
+margin-left: 0.25em;
+margin-right: 0.25em;
+
+padding: 6px;
+
+}
+
+#taketour {
+border: 4px solid #000;
+}
+
+#getinvolved {
+border: 4px solid #000;
+}
+
+#installit {
+border: 4px solid #000;
+}
+
+.buttons {
+display: none;
+}

@@ -1,0 +1,313 @@
+<?php
+/**
+ * MonoBook nouveau
+ *
+ * Translated from gwicke's previous TAL template version to remove
+ * dependency on PHPTAL.
+ *
+ * @todo document
+ * @package MediaWiki
+ * @subpackage Skins
+ */
+
+if( !defined( 'MEDIAWIKI' ) )
+	die( -1 );
+
+/** */
+require_once('includes/SkinTemplate.php');
+
+/**
+ * Inherit main code from SkinTemplate, set the CSS and template filter.
+ * @todo document
+ * @package MediaWiki
+ * @subpackage Skins
+ */
+class SkinBongo extends SkinTemplate {
+	/** Using monobook. */
+	function initPage( &$out ) {
+		SkinTemplate::initPage( $out );
+		$this->skinname  = 'bongo';
+		$this->stylename = 'bongo';
+		$this->template  = 'BongoTemplate';
+	}
+}
+
+/**
+ * @todo document
+ * @package MediaWiki
+ * @subpackage Skins
+ */
+class BongoTemplate extends QuickTemplate {
+	/**
+	 * Template filter callback for MonoBook skin.
+	 * Takes an associative array of data set from a SkinTemplate-based
+	 * class, and a wrapper for MediaWiki's localization database, and
+	 * outputs a formatted page.
+	 *
+	 * @access private
+	 */
+	function execute() {
+		// Suppress warnings to prevent notices about missing indexes in $this->data
+		wfSuppressWarnings();
+
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="<?php $this->text('xhtmldefaultnamespace') ?>" <?php 
+	foreach($this->data['xhtmlnamespaces'] as $tag => $ns) {
+		?>xmlns:<?php echo "{$tag}=\"{$ns}\" ";
+	} ?>xml:lang="<?php $this->text('lang') ?>" lang="<?php $this->text('lang') ?>" dir="<?php $this->text('dir') ?>">
+	<head>
+		<meta http-equiv="Content-Type" content="<?php $this->text('mimetype') ?>; charset=<?php $this->text('charset') ?>" />
+		<?php $this->html('headlinks') ?>
+		<title><?php $this->text('pagetitle') ?></title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/main.css?<?php echo $GLOBALS['wgStyleVersion'] ?>"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" <?php if(empty($this->data['printable']) ) { ?>media="print"<?php } ?> href="<?php $this->text('stylepath') ?>/common/commonPrint.css?<?php echo $GLOBALS['wgStyleVersion'] ?>" />
+		<link rel="stylesheet" type="text/css" media="handheld" href="<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/handheld.css?<?php echo $GLOBALS['wgStyleVersion'] ?>" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/IE50Fixes.css?<?php echo $GLOBALS['wgStyleVersion'] ?>";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/IE55Fixes.css?<?php echo $GLOBALS['wgStyleVersion'] ?>";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/IE60Fixes.css?<?php echo $GLOBALS['wgStyleVersion'] ?>";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "<?php $this->text('stylepath') ?>/<?php $this->text('stylename') ?>/IE70Fixes.css?<?php echo $GLOBALS['wgStyleVersion'] ?>";</style><![endif]-->
+		<!--[if lt IE 7]><script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath') ?>/common/IEFixes.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<?php print Skin::makeGlobalVariablesScript( $this->data ); ?>
+                
+		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('stylepath' ) ?>/common/wikibits.js?<?php echo $GLOBALS['wgStyleVersion'] ?>"><!-- wikibits js --></script>
+<?php	if($this->data['jsvarurl'  ]) { ?>
+		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('jsvarurl'  ) ?>"><!-- site js --></script>
+<?php	} ?>
+<?php	if($this->data['pagecss'   ]) { ?>
+		<style type="text/css"><?php $this->html('pagecss'   ) ?></style>
+<?php	}
+		if($this->data['usercss'   ]) { ?>
+		<style type="text/css"><?php $this->html('usercss'   ) ?></style>
+<?php	}
+		if($this->data['userjs'    ]) { ?>
+		<script type="<?php $this->text('jsmimetype') ?>" src="<?php $this->text('userjs' ) ?>"></script>
+<?php	}
+		if($this->data['userjsprev']) { ?>
+		<script type="<?php $this->text('jsmimetype') ?>"><?php $this->html('userjsprev') ?></script>
+<?php	}
+		if($this->data['trackbackhtml']) print $this->data['trackbackhtml']; ?>
+		<!-- Head Scripts -->
+		<?php $this->html('headscripts') ?>
+	</head>
+<body <?php if($this->data['body_ondblclick']) { ?>ondblclick="<?php $this->text('body_ondblclick') ?>"<?php } ?>
+<?php if($this->data['body_onload'    ]) { ?>onload="<?php     $this->text('body_onload')     ?>"<?php } ?>
+ class="mediawiki <?php $this->text('nsclass') ?> <?php $this->text('dir') ?> <?php $this->text('pageclass') ?>">
+
+
+
+
+
+
+
+<!-- Header -->
+<div class="wrap">
+	<div id="header">
+		<!-- Navigation -->
+		<div id="navi">
+			<div class="left">
+				<ul>
+					<li><a href="http://bongo-project.org">Home</a></li>
+					<li>|</li>
+					<li><a href="http://svn.gna.org/viewcvs/bongo/">Svn</a></li>
+					<li>|</li>
+					<li><a href="https://gna.org/projects/bongo">GNA!</a></li>
+					<li>|</li>
+					<li><a href="http://forums.bongo-project.org">Forums</a></li>
+					<li>|</li>
+					<li><a href="http://planet.bongo-project.org">Blogs</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<form name="searchbox" id="searchform" action="<?php $this->text('searchaction') ?>">
+				Search: <input class="search" name="search" id="searchInput"  type="text" size="15" <?php if($this->haveMsg('accesskey-search')) { ?>accesskey="<?php $this->msg('accesskey-search') ?>"<?php } if (isset($this->data['search'] ) ) { ?> value="<?php $this->text('search') ?>"<?php } ?> />
+				</form>
+			</div>
+		</div>
+		<!-- /Navigation -->
+		<div id="logo">
+			<img src="<?php echo $this->text('stylepath') ?>/<?php echo $this->text('stylename') ?>/img/bongo.png" alt="Bongo Project" />
+		</div>
+		<div id="categories">
+
+<ul class="userlinks">
+<?php $reversed_personal_urls = array_reverse($this->data['personal_urls']);
+ 			foreach($reversed_personal_urls as $key => $item) { ?>
+				<li class="userlinks" id="pt-<?php echo Sanitizer::escapeId($key) ?>"<?php
+					if ($item['active']) { ?> class="active"<?php } ?>><a href="<?php
+				echo htmlspecialchars($item['href']) ?>"<?php
+				if(!empty($item['class'])) { ?> class="<?php
+				echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php
+				echo htmlspecialchars($item['text']) ?></a></li>
+<?php			} ?>
+			</ul>
+
+
+
+		<h1><?php $this->data['displaytitle']!=""?$this->html('title'):$this->text('title') ?></h1>
+			<div id="contentSub"><?php $this->html('subtitle') ?></div>
+		</div>
+	</div>
+</div>
+<!-- /Header -->
+<div class="wrap">
+	<div id="container">
+<ul class="bongo-tour" style="text-align: center;">
+	<?php			foreach($this->data['content_actions'] as $key => $tab) { ?>
+					 <li class="bongo-tour" id="ca-<?php echo Sanitizer::escapeId($key) ?>"<?php
+					 	if($tab['class']) { ?> class="<?php echo htmlspecialchars($tab['class']) ?>"<?php }
+					 ?>></span><a href="<?php echo htmlspecialchars($tab['href']) ?>"><?php
+					 echo htmlspecialchars($tab['text']) ?></a></li>
+	<?php			 } ?>
+			</ul>
+
+
+
+		<div class="subnav">
+<!--			<ul>
+			<li><span class="subnav-dot">&raquo;</span><a href="">Home</a></li>
+			<li><span class="subnav-dot">&raquo;</span>Wiki
+				<ul class="subnav-indent">
+				<li><span class="subnav-dot">&raquo;</span><a href="">Home</a></li>
+				<li><span class="subnav-dot">&raquo;</span><a href="">Wiki</a></li>
+				<li><span class="subnav-dot">&raquo;</span><a href="">Svn</a></li>
+				<li><span class="subnav-dot">&raquo;</span><a href="">GNA!</a></li>
+				<li><span class="subnav-dot">&raquo;</span><a href="">Forums</a></li>
+				<li><span class="subnav-dot">&raquo;</span><a href="">Blogs</a></li>
+				</ul></li>
+			<li><span class="subnav-dot">&raquo;</span><a href="">GNA!</a></li>
+			<li><span class="subnav-dot">&raquo;</span><a href="">Forums</a></li>
+			<li><span class="subnav-dot">&raquo;</span><a href="">Blogs</a></li>
+			</ul>-->
+
+<!-- mainpage random page help donations
+<?php foreach ($this->data['sidebar'] as $bar => $cont) { ?>
+		<li><span class="subnav-dot">&raquo;</span><?php $out = wfMsg( $bar ); if (wfEmptyMsg($bar, $out)) echo $bar; else echo $out; ?></li>
+<ul>
+<?php 			foreach($cont as $key => $val) { ?>
+				<li id="<?php echo Sanitizer::escapeId($val['id']) ?>"<?php
+					if ( $val['active'] ) { ?> class="active" <?php }
+				?>><span class="subnav-dot">&raquo;</span><a href="<?php echo htmlspecialchars($val['href']) ?>"><?php echo htmlspecialchars($val['text']) ?></a></li>
+<?php			} ?>
+	<?php } ?>
+	</ul>-->
+
+<ul style="list-style-image: url(skins/bongo/img/go-home.png);"><li><a href="index.php">Main Page</a></li></ul>
+<ul style="list-style-image: url(skins/bongo/img/emblem-photos.png);"><li><a href="index.php?title=Tour">Tour</a></li></ul>
+<ul style="list-style-image: url(skins/bongo/img/package-x-generic.png);"><li><a href="index.php?title=Installation">Install</a></li></ul>
+<ul style="list-style-image: url(skins/bongo/img/contact-new.png);"><li><a href="index.php?title=Getting_Involved">Getting Involved</a></li></ul>
+<ul style="list-style-image: url(skins/bongo/img/x-office-document.png);"><li><a href="index.php?title=Documentation">Documentation</a></li>
+<ul style="list-style-type: square; list-style-image: none;"><li>&raquo; <a href="index.php?title=Documentation/Frequently_Asked_Questions">FAQ</a></li><li>&raquo; <a href="index.php?title=Documentation/User_Guide">User Guide</a></li>
+</ul>
+</ul>
+
+		</div>
+		<div class="content">
+
+			<div class="right">
+			<div style="margin: 0 0 20px 0;"></div>
+		<!-- start content -->
+			<?php $this->html('bodytext') ?>
+			<?php if($this->data['catlinks']) { ?><div id="catlinks"><?php       $this->html('catlinks') ?></div><?php } ?>
+			<!-- end content -->
+
+
+			</div>
+		</div>
+
+	</div>
+
+<ul class="bongo-tour" style="text-align: center; text-size: 50%;">
+<?php
+		if($this->data['notspecialpage']) { ?>
+				<li class="bongo-tour" id="t-whatlinkshere"><a href="<?php
+				echo htmlspecialchars($this->data['nav_urls']['whatlinkshere']['href'])
+				?>"><?php $this->msg('whatlinkshere') ?></a></li>
+<?php
+			if( $this->data['nav_urls']['recentchangeslinked'] ) { ?>
+				<li class="bongo-tour" id="t-recentchangeslinked"><a href="<?php
+				echo htmlspecialchars($this->data['nav_urls']['recentchangeslinked']['href'])
+				?>"><?php $this->msg('recentchangeslinked') ?></a></li>
+<?php 		}
+		}
+		if(isset($this->data['nav_urls']['trackbacklink'])) { ?>
+			<li class="bongo-tour" id="t-trackbacklink"><a href="<?php
+				echo htmlspecialchars($this->data['nav_urls']['trackbacklink']['href'])
+				?>"><?php $this->msg('trackbacklink') ?></a></li>
+<?php 	}
+		if($this->data['feeds']) { ?>
+			<li class="bongo-tour" id="feedlinks"><?php foreach($this->data['feeds'] as $key => $feed) {
+					?><span id="feed-<?php echo Sanitizer::escapeId($key) ?>"><a href="<?php
+					echo htmlspecialchars($feed['href']) ?>"><?php echo htmlspecialchars($feed['text'])?></a>&nbsp;</span>
+					<?php } ?></li><?php
+		}
+
+		foreach( array('contributions', 'blockip', 'emailuser', 'upload', 'specialpages') as $special ) {
+
+			if($this->data['nav_urls'][$special]) {
+				?><li class="bongo-tour" id="t-<?php echo $special ?>"><a href="<?php echo htmlspecialchars($this->data['nav_urls'][$special]['href'])
+				?>"><?php $this->msg($special) ?></a></li>
+<?php		}
+		}
+
+		if(!empty($this->data['nav_urls']['print']['href'])) { ?>
+				<li class="bongo-tour" id="t-print"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['print']['href'])
+				?>"><?php $this->msg('printableversion') ?></a></li><?php
+		}
+
+		if(!empty($this->data['nav_urls']['permalink']['href'])) { ?>
+				<li class="bongo-tour" id="t-permalink"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['permalink']['href'])
+				?>"><?php $this->msg('permalink') ?></a></li><?php
+		} elseif ($this->data['nav_urls']['permalink']['href'] === '') { ?>
+				<li class="bongo-tour" id="t-ispermalink"><?php $this->msg('permalink') ?></li><?php
+		}
+
+		wfRunHooks( 'MonoBookTemplateToolboxEnd', array( &$this ) );
+?>
+
+
+
+</ul>
+
+
+</div>
+<!--<div class="wrap">-->
+
+	<div id="footer">
+		<div class="left">
+			<ul>
+			<li><a href="">Feedback</a></li>
+			<li>|</li>
+			<li><a href="">Webmaster</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			<ul>
+			<li><a href="">Disclaimer</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="copyright">
+		Bongo Design - &copy; 2005 Sebastian Doll. Released under the GPL.<br />
+		<span class="valid"> <a href="http://validator.w3.org/check?uri=http://www.pixelmilk.de/bongo">XHTML</a></span> <span class="valid"> <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.pixelmilk.de/bongo">CSS</a></span>
+	</div>
+<!--</div>-->
+
+
+
+
+
+<?php $this->html('reporttime') ?>
+<?php if ( $this->data['debug'] ): ?>
+<!-- Debug output:
+<?php $this->text( 'debug' ); ?>
+
+-->
+<?php endif; ?>
+</body></html>
+<?php
+	wfRestoreWarnings();
+	} // end of execute() method
+} // end of class
+?>
